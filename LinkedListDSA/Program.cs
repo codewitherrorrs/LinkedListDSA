@@ -14,10 +14,11 @@
             //demo.RemoveFirstNode();
             //demo.RemoveLast();
             //demo.Size();
-            demo.InsertNodeAtSpecificPosition(0, 25);
-            demo.InsertNodeAtSpecificPosition(1, 58);
-            demo.InsertNodeAtSpecificPosition(2, 2);
-            demo.InsertNodeAtSpecificPosition(3, 250);
+            //demo.InsertNodeAtSpecificPosition(0, 25);
+            //demo.InsertNodeAtSpecificPosition(1, 58);
+            //demo.InsertNodeAtSpecificPosition(2, 2);
+            //demo.InsertNodeAtSpecificPosition(3, 250);
+            demo.DeleteNodeAtSpecificPosition(2);
             demo.Display();
             Console.ReadLine();
         }
