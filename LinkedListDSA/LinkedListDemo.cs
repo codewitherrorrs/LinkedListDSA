@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,7 +30,7 @@ namespace LinkedListDSA
             Console.WriteLine("{0} LinkedList : ", node.data);
         }
 
-        //Add Data from Reverse Order.
+        //Add Data from Reverse Order / First.
         public void AddInReverse(int data)
         {
             Node newNode = new Node(data);
@@ -46,7 +47,7 @@ namespace LinkedListDSA
             //Console.WriteLine($"Data : {newNode.data}");
         }
 
-        //RemoveAtNode
+        //Remove Node from first.
         public void RemoveFirstNode()
         {
             if (head == null)
@@ -91,6 +92,27 @@ namespace LinkedListDSA
                 count++;
             }
             Console.WriteLine($"The Size of LinkedList : {count} ");
+        }
+
+        //Insert Data from the given position.
+        public void InsertNodeAtSpecificPosition(int position,int data)
+        {
+            Console.WriteLine($"Position is entered : {position} and Data is : {data}");
+            if(position == 0)
+            {
+                AddInReverse(data);
+                return;
+            }
+            Node newNode = new Node(data);
+            Node temp = head;
+            int count = 1;
+            while(count < position-1)
+            {
+                temp = temp.next;
+                count++;
+            }
+            newNode.next = temp.next;
+            temp.next = newNode; 
         }
 
         //For Printing.

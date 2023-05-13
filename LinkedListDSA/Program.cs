@@ -12,7 +12,12 @@
             demo.AddInReverse(100);
             demo.AddInReverse(70);
             //demo.RemoveFirstNode();
-            demo.RemoveLast();
+            //demo.RemoveLast();
+            //demo.Size();
+            demo.InsertNodeAtSpecificPosition(0, 25);
+            demo.InsertNodeAtSpecificPosition(1, 58);
+            demo.InsertNodeAtSpecificPosition(2, 2);
+            demo.InsertNodeAtSpecificPosition(3, 250);
             demo.Display();
             Console.ReadLine();
         }
