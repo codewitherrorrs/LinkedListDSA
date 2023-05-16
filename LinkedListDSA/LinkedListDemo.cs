@@ -10,7 +10,7 @@ namespace LinkedListDSA
     public class LinkedListDemo
     {
         public Node head;
-        //Add Data from last.
+        //Add Data from last.....
         public void Add(int data)
         {
             Node node = new Node(data);
@@ -30,7 +30,7 @@ namespace LinkedListDSA
             Console.WriteLine("{0} LinkedList : ", node.data);
         }
 
-        //Add Data from Reverse Order / First.
+        //Add Data from Reverse Order / First.....
         public void AddInReverse(int data)
         {
             Node newNode = new Node(data);
@@ -47,7 +47,7 @@ namespace LinkedListDSA
             //Console.WriteLine($"Data : {newNode.data}");
         }
 
-        //Remove Node from first.
+        //Remove Node from first.....
         public void RemoveFirstNode()
         {
             if (head == null)
@@ -57,7 +57,7 @@ namespace LinkedListDSA
             head = head.next;
         }
 
-        //Remove the lastNode
+        //Remove the lastNode.....
         public void RemoveLast()
         {
             if (head == null)
@@ -76,7 +76,7 @@ namespace LinkedListDSA
             lastNode.next = null;
         }
 
-        //Size of the LinkedList.
+        //Size of the LinkedList.....
         public void Size()
         {
             Node temp = head;
@@ -94,7 +94,7 @@ namespace LinkedListDSA
             Console.WriteLine($"The Size of LinkedList : {count} ");
         }
 
-        //Insert Data from the given position.
+        //Insert Data from the given position.....
         public void InsertNodeAtSpecificPosition(int position,int data)
         {
             Console.WriteLine($"Position is entered : {position} and Data is : {data}");
@@ -115,7 +115,7 @@ namespace LinkedListDSA
             temp.next = newNode; 
         }
 
-        //Delete Node or Data from the given Position.
+        //Delete Node or Data from the given Position.....
         public void DeleteNodeAtSpecificPosition(int position)
         {
             Console.WriteLine($"Position : {position}");
@@ -135,11 +135,32 @@ namespace LinkedListDSA
                     count++;
                 }
                 previous.next = current.next;
-
             }
         }
 
-        //For Printing.
+        //For Sorting the LinkedList.
+        public void Sorting(int value)
+        {
+            Node newNode = new Node(value);
+
+            if (head == null || value < head.data)
+            {
+                newNode.next = head;
+                head = newNode;
+            }
+            else
+            {
+                Node current = head;
+                while (current.next != null && current.next.data < value)
+                {
+                    current = current.next;
+                }
+                newNode.next = current.next;
+                current.next = newNode;
+            }
+        }
+
+        //For Printing the LinkedList....
         public void Display()
         {
             Node temp = head;
